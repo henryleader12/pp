@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollable Graphical Effect Background</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0a1eb5b1, #04b7d3);
+            background-size: 200% 200%;
+            animation: gradientAnimation 10s ease infinite;
+            z-index: -1;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+
+        .shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            animation: moveShape 15s infinite;
+        }
+
+        @keyframes moveShape {
+            0% {
+                transform: translate(0, 0) scale(1);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translate(50%, 50%) scale(1.5);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translate(0, 0) scale(1);
+                opacity: 0.7;
+            }
+        }
+
+        .shape1 { width: 100px; height: 100px; top: 10%; left: 20%; animation-duration: 10s; }
+        .shape2 { width: 150px; height: 150px; top: 40%; left: 50%; animation-duration: 12s; }
+        .shape3 { width: 200px; height: 200px; top: 70%; left: 80%; animation-duration: 15s; }
+        .shape4 { width: 250px; height: 250px; top: 30%; left: 30%; animation-duration: 20s; }
+
+        .lines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .line {
+            position: absolute;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            width: 100%;
+            height: 100%;
+            animation: drawLine 20s linear infinite;
+        }
+
+        @keyframes drawLine {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+
+        .line1 { animation-delay: 0s; }
+        .line2 { animation-delay: 10s; }
+        .line3 { animation-delay: 5s; }
+
+        .content {
+            position: relative;
+            color: white;
+            text-align: center;
+            z-index: 1;
+            padding: 20px;
+            min-height: 300vh; /* Increase this value to make the page longer */
+        }
+
+        .content h1 {
+            margin: 0;
+            font-size: 3em;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        }
+
+        .content p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        }
+
+        .game-container {
+            width: 80%;
+            max-width: 800px;
+            margin: 40px auto;
+            border: 2px solid #fff;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="shapes">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+        <div class="shape shape4"></div>
+    </div>
+    <div class="lines">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+    </div>
+
+    <div class="content">
+        <h1><u><b>Welcome to the Techplay Game Zone</b></u></h1>
+        <p>Get ready for an awesome experience!</p>
+     <p><h2><b><u>All Your Games</u></b></h2></p>
+     <p>1:Naruto Ultimate Ninja Storm</p>
+     <p>2:Naruto Ultimate NInja Storm 2</p>
+     <p>3:Naruto Ultimate Ninja Storm 3 Full Burst</p>
+     <p>4:Naruto Ultimate NInja Storm 4</p>
+     <p>5:Naruto Ultimate Ninja Torm Connection</p>
+     <p>6:Marvel Spiderman 2</p>
+     <p>7:Miles Morales</p>
+     <p>8:Sekiro[Shadow Dies Twice]</p>
+     <p>9:Amaizing Spiderman 2</p>
+     <p>10:Gragon Ball Kazone</p>
+     <p>11:Justise Leadge</p>
+     <p>12:Tomb Raider[Part 1]</p>
+     <p>13:Avengers</p>
+     <p>14:Roblox</p>
+     <p>15:GTA IV</p>
+     <p>16:GTA V</p>
+     <p>17:</p>
+     <p>18:</p>
+     <p>19:</p>
+     <p>1:</p>
+     <p>1:</p>
+     <p>1:</p>
+     <p>1:</p>
+     <u><b><h2>1:Naruto Ultimate Ninja Storm</h2></b></u><img src="C:\Users\PC\OneDrive\Documents\New folder\Html\maxresdefault (1).jpg" alt="" width="800" height="600">
+     <iframe src="https://www.youtube.com/embed/dTTtaeZbJM4?autoplay=1" width="700" height="600" title="A YouTube video" frameborder="0" allowfullscreen></iframe>
+     <b><u><h2>2:Naruto Ultimate Ninja Storm 2</h2></u></b>
+     <iframe src="https://www.youtube.com/embed/-vUW90VnjsA?autoplay=1" width="700" height="600" title="A YouTube video" frameborder="0" allowfullscreen></iframe>
+     <img src="C:\Users\PC\OneDrive\Documents\New folder\Html\maxresdefault.jpg" width="800" height="600"
+        </div>
+        <!-- Add more content to make the page scrollable -->
+        <p style="margin-top: 500px;"></p>
+        <p style="margin-top: 1000px;">You can add more content here.</p>
+        <p style="margin-top: 10000px;">End of the content.</p>
+    </div>
+</body>
+</html>
